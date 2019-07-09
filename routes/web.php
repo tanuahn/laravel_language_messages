@@ -13,7 +13,11 @@
 
 use Illuminate\Support\Facades\App;
 
-Route::get('/{locale?}', function ($locale = null) {
-    App::setLocale($locale);
-    return view('welcome');
-});
+//Route::get('/{locale?}', function ($locale = null) {
+//    App::setLocale($locale);
+//    return view('welcome');
+//});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
